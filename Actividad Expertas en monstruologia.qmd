@@ -5,10 +5,11 @@ editor: visual
 ---
 
 # Actividad: Expertas en monstruología
+
 Cristobal Medina Meza | A01643121
 
-
 ### Lectura de datos
+
 ```{r}
 library(DescTools)
 library(tidyverse)
@@ -18,27 +19,27 @@ library(readxl)
 ```
 
 ```{r}
-data1 = read.csv("C:/Users/crist/Downloads/datos_act/criaturas_mitologicas.csv")
+data1 = read.csv("C:/Users/crist/OneDrive/Escritorio/Actividad-Expertas-en-monstruologia/datos_act/criaturas_mitologicas.csv")
 head(data1)
 ```
 
 ```{r}
-data2 = read.csv("C:/Users/crist/Downloads/datos_act/criaturas_sobrenaturales_100.csv")
+data2 = read.csv("C:/Users/crist/OneDrive/Escritorio/Actividad-Expertas-en-monstruologia/datos_act/criaturas_sobrenaturales_100.csv")
 head(data2)
 ```
 
 ```{r}
-data3 = read.csv("C:/Users/crist/Downloads/datos_act/DatosCriaturas.csv")
+data3 = read.csv("C:/Users/crist/OneDrive/Escritorio/Actividad-Expertas-en-monstruologia/datos_act/DatosCriaturas.csv")
 head(data3)
 ```
 
 ```{r}
-data4 = read_excel("C:/Users/crist/Downloads/datos_act/criaturas_ghostbusters.xlsx")
+data4 = read_excel("C:/Users/crist/OneDrive/Escritorio/Actividad-Expertas-en-monstruologia/datos_act/criaturas_ghostbusters.xlsx")
 head(data4)
 ```
 
 ```{r}
-data5 = read.csv("C:/Users/crist/Downloads/datos_act/datos_moun.csv", sep = ";")
+data5 = read.csv("C:/Users/crist/OneDrive/Escritorio/Actividad-Expertas-en-monstruologia/datos_act/datos_moun.csv", sep = ";")
 data5
 ```
 
@@ -64,6 +65,7 @@ data5 <- data5[!duplicated(data5), ]
 ```
 
 ## Atributos medios verdaderos
+
 ```{r}
 data_full <- rbind(data1, data2, data3, data4, data5)
 ```
@@ -78,11 +80,14 @@ data_full$Esperanza_de_vida <- as.numeric(data_full$Esperanza_de_vida)
 ```
 
 ### Vector de medias de los atributos numéricos de los monstruos y seres mitológicos.
+
 ```{r}
 means <- sapply(data_full, function(x) if(is.numeric(x)) mean(x, na.rm = TRUE) else NA)
 means
 ```
-##  Prueba de hipótesis: los atributos de sus monstruos coinciden estadísticamente con el vector real de la población.
+
+## Prueba de hipótesis: los atributos de sus monstruos coinciden estadísticamente con el vector real de la población.
+
 ```{r}
 mu_0 = c(10.615348,5277.962398,40.258258,7.172131,43187.293033)
 ```
@@ -90,7 +95,6 @@ mu_0 = c(10.615348,5277.962398,40.258258,7.172131,43187.293033)
 ```{r}
 data5$Esperanza_de_vida <- as.numeric(data5$Esperanza_de_vida)
 ```
-
 
 ```{r}
 X = data5 |>
@@ -100,8 +104,8 @@ X = data5 |>
 ```{r}
 HotellingsT2Test(x = X, mu = mu_0)
 ```
-No se rechaza que las medias de nuestros mounstruos son diferentes a los atributos medios verdaderos de la población de monstruos.
 
+No se rechaza que las medias de nuestros mounstruos son diferentes a los atributos medios verdaderos de la población de monstruos.
 
 ## Prueba de hipótesis para ver si los atributos medios de sus monstruos difieren con los de algún otro equipo.
 
@@ -114,7 +118,6 @@ means_team
 mu_0_team = c(21.336,4865.576,47.520,7.336,3139.880)
 ```
 
-
 ### Equipo 1:
 
 ```{r}
@@ -125,6 +128,7 @@ X_1 = data1 |>
 ```{r}
 HotellingsT2Test(x = X_1, mu = mu_0_team)
 ```
+
 No se rechaza que las medias de nuestros mounstruos son diferentes a los atributos medios del equipo 1.
 
 ### Equipo 2:
@@ -137,7 +141,8 @@ X_2 = data2 |>
 ```{r}
 HotellingsT2Test(x = X_2, mu = mu_0_team)
 ```
-No se rechaza que las medias de nuestros mounstruos son diferentes a los atributos medios del equipo 1.
+
+No se rechaza que las medias de nuestros mounstruos son diferentes a los atributos medios del equipo 2.
 
 ### Equipo 3:
 
@@ -149,7 +154,8 @@ X_3 = data3 |>
 ```{r}
 HotellingsT2Test(x = X_3, mu = mu_0_team)
 ```
-No se rechaza que las medias de nuestros mounstruos son diferentes a los atributos medios del equipo 1.
+
+No se rechaza que las medias de nuestros mounstruos son diferentes a los atributos medios del equipo 3.
 
 ### Equipo 4:
 
@@ -161,4 +167,8 @@ X_4 = data4 |>
 ```{r}
 HotellingsT2Test(x = X_4, mu = mu_0_team)
 ```
-No se rechaza que las medias de nuestros mounstruos son diferentes a los atributos medios del equipo 1.
+
+No se rechaza que las medias de nuestros mounstruos son diferentes a los atributos medios del equipo 4.
+
+
+
