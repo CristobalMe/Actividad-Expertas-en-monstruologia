@@ -1,0 +1,101 @@
+Nombre,Altura (m),Peso (kg),Velocidad (km/h),Peligrosidad,Esperanza de vida (años)
+Vampiro,1.8,75,40,9,999
+Hombre Lobo,2.1,120,60,8,150
+Fantasma,0,0,0,5,999
+Demonio,2.5,200,30,10,999
+Dragón,15,15000,80,10,1000
+Zombi,1.7,65,5,4,10
+Espectro,2,0,0,6,999
+Kraken,20,25000,25,9,500
+Medusa,1.7,60,25,8,999
+Súcubo,1.75,55,30,7,999
+Wendigo,3,150,50,9,999
+Sirena,1.6,50,15,7,200
+Minotauro,2.5,350,20,8,200
+Gárgola,2,300,10,6,999
+Leviatán,100,50000,40,10,999
+Vampiro de Bram Stoker,1.85,80,45,9,999
+Alien (Xenomorfo),2.2,100,50,10,200
+Hombre Invisible,1.75,75,0,6,80
+Troll,3.5,400,10,7,300
+Yeti,2.8,300,30,6,500
+Fénix,1,5,80,5,999
+Centauro,2.5,350,60,6,100
+Quimera,4,1000,70,9,600
+Banshee,1.7,50,15,5,999
+Chupacabras,1.5,50,40,7,30
+Hombre Polilla,2,90,30,6,120
+Sombra,0,0,0,8,999
+Basilisco,15,2000,25,10,1000
+Hidra,10,8000,35,9,999
+Coloso,20,20000,10,8,800
+Esfinge,3.5,400,25,9,999
+Cerbero,1.75,65,20,4,999
+Elfo,1.8,70,10,7,500
+Mago Oscuro,2.2,110,50,8,150
+Licántropo,0,0,20,7,100
+Doppelgänger,3,1000,5,6,500
+Golem,2.8,300,15,7,400
+Ogro,1.8,80,30,7,100
+Nagual,2.1,90,35,5,150
+Mothman,6,5000,5,8,999
+Ent,3.2,450,12,6,300
+Troll de Montaña,1.7,70,10,8,999
+Múmia,1.75,55,35,8,999
+Demonio Súcubo,0,0,0,8,999
+Fantasma Poltergeist,4,1500,10,7,600
+Cíclope,2,90,20,6,999
+Djinn,1.5,50,25,6,100
+Trasgo,1,30,15,4,500
+Harpía,2,60,25,7,999
+Gorgona,1.7,60,30,8,999
+Vampiro Nosferatu,1.85,70,40,9,999
+Lamia,2,80,30,7,500
+Súcubo Infernal,1.75,60,35,8,999
+Dullahan,1.8,90,60,6,200
+Kelpie,2.5,400,80,9,999
+Draugr,2.2,120,40,8,400
+Wraith,2,0,0,8,999
+Araña Gigante,4,500,10,6,999
+Kitsune,1.6,45,60,7,1000
+Oni,3,350,20,9,700
+Gremlin,1.2,50,40,6,200
+Krampus,2.5,150,25,8,999
+Greta,1.75,60,20,6,999
+Tiamat,10,2000,60,10,999
+Balrog,5,800,70,10,1000
+Wyvern,8,1500,80,9,999
+Roc,6,2000,50,9,999
+Súcubo Menor,1.8,55,30,6,300
+Jörmungandr,30,100000,5,10,999
+Icthyoide,2,150,25,6,250
+Abominación,2.5,300,35,8,999
+Gárgola Alada,3,350,50,7,800
+Leshy,2,90,60,8,999
+Djinn de Fuego,1.5,70,25,7,300
+Sirena Oscura,2.5,10,10,8,999
+Espectro de Niebla,7,3000,80,9,1000
+Dragón de Hielo,2.1,200,45,8,200
+Cazador Nocturno,0.5,5,0,4,100
+Mandrágora,2.4,150,55,8,999
+Licántropo Primordial,1,5,100,5,500
+Fénix de Fuego,12,15000,20,10,999
+Titán,3,1000,10,9,600
+Troll de Río,10,5000,15,10,999
+Centinela,20,8000,5,9,1000
+Coloso de Piedra,2.2,100,35,6,500
+Fantasma Sombrío,2,90,30,8,999
+Jinn del Desierto,1.8,75,25,10,999
+Fomoré,30,20000,5,7,999
+Serpiente Marina,2,90,30,6,1000
+Goblin,1.5,100,50,8,999
+Orco,2.3,200,30,10,300
+Basilisco Infernal,2.5,50,60,7,999
+Lobo Espectral,20,40000,10,10,999
+Zaratan,3.5,350,20,9,600
+Troll de Caverna,4,1000,25,10,500
+Serafín Oscuro,1.8,60,10,8,999
+Golem de Hierro,2.5,200,50,9,999
+Cuervo del Inframundo,0.5,20,30,8,1000
+Pennywise,1.95,108,70,7,1500
+Chucky,0.6,0.5,10,6,100

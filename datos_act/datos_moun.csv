@@ -1,0 +1,126 @@
+﻿Nombre de la criatura;Altura (m);Peso (kg);Velocidad (km/h);Peligrosidad (1-10);Esperanza de vida (años)
+Dragón;30;5000;90;10;1000
+Vampiro;18;75;40;8;500
+Hombre Lobo;21;110;60;7;100
+Kraken;50;20000;40;10;200
+Fénix;1;2;200;3;1000
+Gorgona;19;70;30;7;350
+Minotauro;25;300;25;6;150
+Yeti;3;500;35;6;300
+Troll;4;700;20;5;200
+Espectro;17;0;100;4;Inmortal
+Súcubo;17;60;40;6;300
+Hidra;12;5000;15;9;500
+Grifo;2;300;80;7;150
+Basilisco;5;5;10;9;200
+Zombi;18;70;5;2;10
+Cíclope;4;1000;15;5;500
+Quimera;25;400;50;8;200
+Leviatán;30;25000;60;10;1000
+Sirena;17;60;25;5;300
+Sátiro;15;65;30;4;250
+Wendigo;27;180;50;9;350
+Banshee;16;0;70;7;Inmortal
+Dullahan;18;80;50;8;400
+Demonio;21;90;45;10;Inmortal
+Esfinge;25;350;35;7;600
+Orco;23;150;20;6;100
+Elfo Oscuro;19;75;40;6;700
+Gremlin;1;30;15;3;70
+Ogros;3;600;25;5;200
+Licántropo;21;110;55;7;100
+Frankenstein;24;180;10;5;80
+Doppelgänger;18;75;25;6;Inmortal
+Golem;3;500;10;6;Inmortal
+Duende;1;40;25;4;200
+Necrófago;18;80;10;7;120
+Manticora;22;250;60;8;300
+Espectro de Anubis;2;100;50;7;Inmortal
+Furia;18;60;70;8;500
+Naga;3;250;25;6;400
+Cthulhu;100;50000;100;10;Inmortal
+Basilisco Gigante;15;1000;15;10;400
+Wraith;19;0;80;8;Inmortal
+Ent;10;1200;5;3;1000
+Selkie;17;60;30;4;150
+Poltergeist;15;0;0;7;Inmortal
+Valkiria;18;70;50;6;Inmortal
+Quetzalcóatl;30;5000;150;9;Inmortal
+Cerbero;25;350;45;9;500
+Gnomo;1;35;10;2;120
+Ángel Caído;2;80;70;9;Inmortal
+Harpía;18;65;60;6;400
+Gigante;6;2000;25;7;500
+Incubo;18;75;40;6;300
+Momia;17;70;10;4;3000
+Chupacabras;15;50;60;5;120
+Jabberwocky;3;400;80;9;600
+Barghest;15;80;50;7;150
+Warg;21;150;60;7;200
+Draugr;2;120;30;8;300
+Lamias;22;90;35;7;500
+Seraphim;25;75;90;9;Inmortal
+Ángel de la Muerte;22;70;100;10;Inmortal
+Hombre Polilla;2;90;120;5;300
+Wight;19;70;30;7;Inmortal
+Basilisco de Hielo;8;3000;15;10;600
+Dragón de Komodo;3;300;20;5;50
+Sombra Viviente;2;0;50;8;Inmortal
+Serpiente Marina;20;15000;60;9;400
+Pegaso;2;200;90;6;1000
+Liche;19;0;25;10;Inmortal
+Hombre Pez;18;80;40;6;150
+Gárgola;19;100;60;7;600
+Wyvern;3;400;80;8;500
+Cerda de Cromión;22;500;30;6;150
+Satanael;3;150;70;10;Inmortal
+Antiguo Primordial;50;35000;5;10;Inmortal
+Grim Reaper;2;0;70;10;Inmortal
+Djinn;21;80;90;9;Inmortal
+Boggart;15;50;20;6;300
+Nosferatu;18;60;30;8;500
+Nessie;25;30000;50;7;1500
+Chimera de Escarcha;3;400;60;8;400
+Wendigo Albino;28;190;55;9;400
+Demonio Sombrío;2;85;45;10;Inmortal
+Ankou;2;70;70;9;Inmortal
+Kelpie;18;600;80;7;300
+Ahuizotl;15;80;40;6;200
+Barón Samedi;185;75;35;7;Inmortal
+Baku;25;500;30;4;1000
+Dullahan de la Sombra;19;85;60;8;500
+Ifrit;3;800;90;9;Inmortal
+Mokele-Mbembe;11;12000;40;6;700
+Spriggan;2;80;30;5;600
+Wyrm de Hielo;5;2000;70;8;400
+Rakshasa;21;100;45;9;800
+Surtur;50;10000;35;10;Inmortal
+Fomorian;7;2500;20;8;500
+Kappa;14;70;25;5;300
+Ghul;18;65;35;7;300
+Aspid;25;15000;60;10;900
+Nagual;19;85;50;6;600
+Cuelebre;20;12000;45;9;1000
+Fenrir;15;8000;80;10;Inmortal
+Behemoth;30;20000;25;10;Inmortal
+Basilisco del Pantano;10;5000;15;9;500
+Golem de Lava;4;1000;10;9;500
+Zaratan;100;50000;5;8;1000
+Mimic;15;90;20;6;200
+Tiamat;40;40000;100;10;Inmortal
+Hecatónquiro;10;10000;25;10;1000
+Baba Yaga;17;65;30;8;300
+Gárgola Voladora;2;300;80;7;500
+Manticora Albina;23;270;70;8;400
+Apofis;100;80000;80;10;Inmortal
+Cernunnos;22;150;40;7;Inmortal
+Djinn de Fuego;25;80;90;9;Inmortal
+Empusa;175;55;45;7;300
+Echidna;10;7000;35;9;Inmortal
+Jörmungandr;150;100000;60;10;Inmortal
+Kitsune;16;60;50;6;1000
+Krampus;21;90;50;8;600
+Lechuza;18;65;40;5;300
+Moira;25;150;35;8;Inmortal
+Wyrm de Fuego;4;3000;70;9;600
+Zhuyin;20;18000;55;9;800
