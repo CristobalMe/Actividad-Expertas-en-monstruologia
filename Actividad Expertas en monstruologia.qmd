@@ -6,7 +6,7 @@ editor: visual
 
 # Actividad: Expertas en monstruología
 
-Cristobal Medina Meza | A01643121
+Cristobal Medina Meza \| A01643121 Brenda Itzelt Gómez Catzín \| A01741199
 
 ### Lectura de datos
 
@@ -87,6 +87,10 @@ means
 ```
 
 ## Prueba de hipótesis: los atributos de sus monstruos coinciden estadísticamente con el vector real de la población.
+
+\$H\_{0}: \mu\_{0} = \$ los atributos de nuestros mosntruos son iguales a los de la poblacion
+
+\$H\_{\alpha}: \mu\_{\alpha} = \$ los atributos de nuestros monstruos son diferentes a los de la poblacion
 
 ```{r}
 mu_0 = c(10.615348,5277.962398,40.258258,7.172131,43187.293033)
@@ -170,5 +174,128 @@ HotellingsT2Test(x = X_4, mu = mu_0_team)
 
 No se rechaza que las medias de nuestros mounstruos son diferentes a los atributos medios del equipo 4.
 
+## Intervalos de Bonferri
 
+```{r}
+bonferrari = function(X, alpha = 0.05){
+  X = as.matrix(X)
+  p = ncol(X)
+  n = nrow(X)
+  
+  mm = colMeans(X)
+  ss = apply(X,2, var)
+  tt = qt(1 - alpha/(2*p), n-1)
+  lower = mm - tt*sqrt(ss/n)
+  upper = mm + tt*sqrt(ss/n)
+    
+  return(tibble(mean = mm, lower = lower, upper = upper))
+  
+  }
+```
 
+## Profile Plots
+
+### equipo potaxie
+
+```{r}
+
+#Paso 3: escalamos las variables
+Z_potaxie = sweep(X, MARGIN = 2, STATS = mu_0, FUN = "/")
+
+#Paso 4:Calculamos los intervalos con corrección de Bonferroni para las variables escaladas
+
+df_potaxie = Z_potaxie |>
+  bonferrari()
+
+df_potaxie
+
+```
+
+```{r graficamos}
+
+df_potaxie = df_potaxie |>
+  mutate(variable = c("Altura", "Peso", "Velocidad", "Peligrosidad", "Esperanza_de_vida"))
+
+ggplot(df_potaxie, aes(x = variable, y = mean)) +
+  geom_pointrange(aes(ymin = lower, ymax = upper), color = "#FF80A1") +
+  geom_hline(yintercept = 1, lty = "dashed", color = "#98A869") +
+  labs(x = "", y = "Ratio", title = "Profile plot equipo potaxie") +
+  theme_bw() +
+   theme(plot.title = element_text(hjust = 0.5, face = "bold", margin = margin(0, 0, 5, 0)),
+         axis.title.x = element_text(face = "bold"),
+         axis.title.y = element_text(face = "bold", angle = 90),
+         axis.text.x = element_text(size = 12, face = "bold"),
+         legend.title = element_text(hjust = 0.5, face = "bold"),
+         legend.text = element_text(hjust = 0.5),
+         strip.text = element_text(hjust = 0.5, face = "bold", margin = margin(2, 3, 3, 3)),
+         plot.subtitle = element_text(hjust = 0.5, face = "bold", size = 10, margin = margin(0, 0, 5, 0)))
+
+```
+
+### equipo 1
+
+```{r}
+Z_1 = sweep(X_1, MARGIN = 2, STATS = mu_0, FUN = "/")
+
+df_e1 = Z_1 |>
+  bonferrari()
+
+df_e1
+```
+
+```{r graficamos e1}
+df_e1 = df_e1 |>
+  mutate(variable = c("Altura", "Peso", "Velocidad", "Peligrosidad", "Esperanza_de_vida"))
+
+ggplot(df_e1, aes(x = variable, y = mean)) +
+  geom_pointrange(aes(ymin = lower, ymax = upper), color = "#FF80A1") +
+  geom_hline(yintercept = 1, lty = "dashed", color = "#98A869") +
+  labs(x = "", y = "Ratio", title = "Profile plot equipo mundo de wumpus") +
+  theme_bw() +
+   theme(plot.title = element_text(hjust = 0.5, face = "bold", margin = margin(0, 0, 5, 0)),
+         axis.title.x = element_text(face = "bold"),
+         axis.title.y = element_text(face = "bold", angle = 90),
+         axis.text.x = element_text(size = 12, face = "bold"),
+         legend.title = element_text(hjust = 0.5, face = "bold"),
+         legend.text = element_text(hjust = 0.5),
+         strip.text = element_text(hjust = 0.5, face = "bold", margin = margin(2, 3, 3, 3)),
+         plot.subtitle = element_text(hjust = 0.5, face = "bold", size = 10, margin = margin(0, 0, 5, 0)))
+```
+
+### equipo 2
+
+```{r}
+Z_2 = sweep(X_2, MARGIN = 2, STATS = mu_0, FUN = "/")
+
+df_e2 = Z_2 |>
+  bonferrari()
+
+df_e2
+```
+
+```{r graficamos 2}
+df_e2 = df_e2 |>
+  mutate(variable = c("Altura", "Peso", "Velocidad", "Peligrosidad", "Esperanza_de_vida"))
+
+ggplot(df_e2, aes(x = variable, y = mean)) +
+  geom_pointrange(aes(ymin = lower, ymax = upper), color = "#FF80A1") +
+  geom_hline(yintercept = 1, lty = "dashed", color = "#98A869") +
+  labs(x = "", y = "Ratio", title = "Profile plot equipo 2") +
+  theme_bw() +
+   theme(plot.title = element_text(hjust = 0.5, face = "bold", margin = margin(0, 0, 5, 0)),
+         axis.title.x = element_text(face = "bold"),
+         axis.title.y = element_text(face = "bold", angle = 90),
+         axis.text.x = element_text(size = 12, face = "bold"),
+         legend.title = element_text(hjust = 0.5, face = "bold"),
+         legend.text = element_text(hjust = 0.5),
+         strip.text = element_text(hjust = 0.5, face = "bold", margin = margin(2, 3, 3, 3)),
+         plot.subtitle = element_text(hjust = 0.5, face = "bold", size = 10, margin = margin(0, 0, 5, 0)))
+```
+
+En este análisis,realizamos intervalos de confianza simultáneos con corrección de Bonferroni entre nuestra muestra y las de otros dos equipos. Entre los tres resultados, observamos que la variable "Esperanza de vida" presentaba una gran similitud en todos los casos, con la variable de velocidad tuvimos una mayor similitud con el equipo 1, mientras que la variable "Peligrosidad" fue más semejante con el equipo 2. Entre los equipos 2 y 3 hubo una gran similitud entre su variable de "Altura", sin embargo, para la variable de "Peso", en todos los equipos se presentaron diferencias significativas en los intervalos.
+
+Estas diferencias en los intervalos pueden deberse a la variabilidad inherente en los datos generados por la IA, ya que aunque algunos monstruos coincidían entre los equipos, sus atributos específicos diferían. Esto puede haber sido el resultado de diferentes rangos utilizados en cada equipo al crear sus bases de datos. Además, la aleatoriedad introducida por la IA podría haber contribuido a la dispersión de los valores entre las muestras de cada equipo.
+
+## Conclusiones
+
+En nuestra primera prueba de hipótesis, ya habíamos encontrado que el promedio de los atributos de nuestros monstruos diferían notariamente con el vector real de la población, como vimos en el caso de los intervalos, esta diferencias puede ser a la misma variabilidad que los equipos hicimos al momento de crear las bases de datos. Para identificar aquellas variables que tienen un mayor impacto en las diferencias globales entre las muestras, es identificar aquellas que no se solapan en los profile plot, observamos que las variables que cumplen lo anterior son: Altura y Velocidad.
