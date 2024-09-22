@@ -40,7 +40,7 @@ head(data4)
 
 ```{r}
 data5 = read.csv("C:/Users/crist/OneDrive/Escritorio/Actividad-Expertas-en-monstruologia/datos_act/datos_moun.csv", sep = ";")
-data5
+head(data5)
 ```
 
 ### Cambio de nombre de columnas
@@ -72,7 +72,7 @@ data_full <- rbind(data1, data2, data3, data4, data5)
 
 ```{r}
 data_full <- data_full[!duplicated(data_full), ]
-data_full
+head(data_full)
 ```
 
 ```{r}
